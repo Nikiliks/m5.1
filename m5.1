@@ -1,0 +1,21 @@
+# Задача "Developer - не только разработчик"
+class House:
+    def __init__(self, name, number_of_floors):
+        self.name = name
+        self.number_of_floors = number_of_floors
+
+    def go_to(self, new_floor):
+         flor = 0
+         print(f'Здание {self.name} имеет {self.number_of_floors} этажей \nПоднимаемся на {new_floor}-й')
+         if new_floor < 1 or new_floor > self.number_of_floors:
+             print(f'{new_floor} - такого этажа не существует')
+         else:
+             for floor in range(new_floor):
+                 print(floor + 1)
+
+
+nord = House('Hose of cards', 22)
+river = House('Hose of arrows', 29)
+
+nord.go_to(4)
+river.go_to(-1)
